@@ -1,0 +1,65 @@
+{
+  "data_sources": {
+    "nutrition_data": {
+      "file_path": "project/data/nutrition_data.csv",
+      "file_type": "csv",
+      "encoding": "UTF-8",
+      "auto_refresh": true,
+      "refresh_interval_seconds": 300
+    },
+    "district_coordinates": {
+      "file_path": "project/data/district_coordinates.csv",
+      "file_type": "csv",
+      "encoding": "UTF-8",
+      "auto_refresh": false
+    }
+  },
+  "data_mapping": {
+    "columns": {
+      "district": "district",
+      "province": "province", 
+      "year": "year",
+      "age_group": "age_group",
+      "nutrient": "nutrient",
+      "stunting": "stunting",
+      "wasting": "wasting",
+      "anemia": "anemia",
+      "poverty_rate": "poverty_rate",
+      "maternal_education": "maternal_education",
+      "sanitation_access": "sanitation_access",
+      "food_diversity": "food_diversity",
+      "health_access_km": "health_access_km"
+    },
+    "filters": {
+      "year_range": [2000, 2021],
+      "provinces": ["All Provinces"],
+      "age_groups": ["All Ages"],
+      "nutrients": ["All Nutrients"]
+    }
+  },
+  "charts": {
+    "national_trends": {
+      "type": "line",
+      "x_axis": "year",
+      "y_axis": "stunting",
+      "group_by": "province",
+      "aggregation": "mean"
+    },
+    "provincial_comparison": {
+      "type": "bar",
+      "x_axis": "province", 
+      "y_axis": "stunting",
+      "aggregation": "mean"
+    },
+    "district_rankings": {
+      "type": "table",
+      "sort_by": "stunting",
+      "sort_order": "desc"
+    },
+    "national_map": {
+      "type": "map",
+      "color_by": "stunting",
+      "size_by": "wasting"
+    }
+  }
+}

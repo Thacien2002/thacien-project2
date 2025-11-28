@@ -1,0 +1,24 @@
+Package: RwandaNutritionDashboard
+Title: Interactive Nutrition Dashboard for Rwanda
+Version: 0.1.0
+Authors@R: 
+    person("Dashboard", "Team", email = "contact@example.com", role = c("aut", "cre"))
+Description: A comprehensive Shiny dashboard for analyzing nutrition indicators in Rwanda.
+License: MIT
+Encoding: UTF-8
+Depends: 
+    R (>= 4.1.0),
+    shiny,
+    shinydashboard,
+    dplyr,
+    ggplot2,
+    plotly,
+    WDI,
+    prophet,
+    httr,
+    googleai
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 7.2.3
